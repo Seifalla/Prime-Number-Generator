@@ -18,6 +18,7 @@ All number are stored in vectors.
 
 # Modular Exponentiation Algorithm:
 Input: vectors x, y, N
+
 Output: x^y mod N
 
 	Initialize z to 1
@@ -41,6 +42,7 @@ Output: x^y mod N
 
 # Square Root Algorithm:
 Input: a vector of integers
+
 Output: a vector of integers representing the square root of the input
 
 	estimate = input/2
@@ -51,6 +53,7 @@ Output: a vector of integers representing the square root of the input
 
 # Random Generator Algorithm:
 Input: an integer L representing the length of the number
+
 Output: a randomly generated number
 
 	Set the first and last bit to 1
