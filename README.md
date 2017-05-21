@@ -26,9 +26,9 @@ Output: x^y mod N
 	Loop over the vector y:
 
 		If the current bit is even
-			z = z2 mod N
+			z = z^2 mod N
 		if it’s odd
-			z = x · z2 mod N 
+			z = x · z^2 mod N 
 
 	return z
 
