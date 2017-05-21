@@ -20,13 +20,16 @@ All number are stored in vectors.
 Input: vectors x, y, N
 Output: x^y mod N
 
-Initialize z to 1
-Loop over the vector y:
-	If the current bit is even
-		z = z2 mod N
-	if it’s odd
-		z = x · z2 mod N 
-return z
+	Initialize z to 1
+
+	Loop over the vector y:
+
+		If the current bit is even
+			z = z2 mod N
+		if it’s odd
+			z = x · z2 mod N 
+
+	return z
 
 
 
@@ -40,21 +43,21 @@ return z
 Input: a vector of integers
 Output: a vector of integers representing the square root of the input
 
-estimate = input/2
-While input != (estimate^2)
-estimate = ((estimate + Arg/estimate)/2)
+	estimate = input/2
+	While input != (estimate^2)
+		estimate = ((estimate + Arg/estimate)/2)
 
-return estimate
+	return estimate
 
 # Random Generator Algorithm:
 Input: an integer L representing the length of the number
 Output: a randomly generated number
 
-Set the first and last bit to 1
-Initialize the counter to 0
-Create a vector N of length L
-While counter is less than the length:
-Use the Unix rand() function to generate a random number
-If it’s even, set the current bit to 0
-If it’s odd, set the current bit to 1
-Return N
+	Set the first and last bit to 1
+	Initialize the counter to 0
+	Create a vector N of length L
+	While counter is less than the length:
+		Use the Unix rand() function to generate a random number
+		If it’s even, set the current bit to 0
+		If it’s odd, set the current bit to 1
+	Return N
