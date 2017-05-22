@@ -373,7 +373,7 @@ vector<int> RandomGenerator(int n){
     int bit;
     int t1;
     t = clock();
-    for(int i = 0; i<=(n-1); i++){1
+    for(int i = 0; i<=(n-1); i++){
         if((t1%2) == 0)
             bit = 0;
         else
