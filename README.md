@@ -47,7 +47,7 @@ Output: a vector of integers representing the square root of the input
 
 	estimate = input/2
 	While input != (estimate^2)
-		estimate = ((estimate + Arg/estimate)/2)
+		estimate = ((estimate + input/estimate)/2)
 
 	return estimate
 
