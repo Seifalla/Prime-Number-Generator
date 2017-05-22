@@ -183,6 +183,8 @@ int main(int argc,char *argv[]){
   return 0;
 }
 
+// this function checks if the randomly generated number is a prime by trying all divisors up to the square root of the number
+
 bool primalityCheck(vector<int> n)
 {
     vector<int> i(0), r(0), q(0), two(0);
@@ -221,7 +223,7 @@ bool primalityCheck(vector<int> n)
     return prime;
     
 }
-
+// This function estimates the value of the square root using the equation: estimate = ((estimate + input/estimate)/2)
 vector<int> sqrt(vector<int> M){
 
    int a = 1;
@@ -263,7 +265,7 @@ vector<int> sqrt(vector<int> M){
     return root;
 }
 
-      
+// this function tests primality. Since the numbers you will be testing are randomly generated, we are going to use the first the single test: 3^(N −1) ≡ 1(mod N).      
 bool primalityTest(vector<int> M){
 
 	vector<int> x(0), y(0),  one(0), r(0);
@@ -289,6 +291,10 @@ bool primalityTest(vector<int> M){
 
 	return prime;
 }
+
+//this function takes a file object as a parameter 
+//and store the numbers in the file in a vector
+//and returns that vector.
 
 vector<int> read_file(ifstream &file, int inputs){
 
@@ -347,6 +353,18 @@ vector<int> read_file(ifstream &file, int inputs){
                 return g;
 
 }
+/* Input: an integer L representing the length of the number
+
+   Output: a randomly generated number
+
+Set the first and last bit to 1
+Initialize the counter to 0
+Create a vector N of length L
+While counter is less than the length:
+	Use the Unix rand() function to generate a random number
+	If it’s even, set the current bit to 0
+	If it’s odd, set the current bit to 1
+Return N */
 
 vector<int> RandomGenerator(int n){
 
@@ -370,7 +388,10 @@ vector<int> RandomGenerator(int n){
     return PrimeTest;
 }
 
-    
+/* this function reads three numbers from a
+text file: x, y, N. And it displays
+x^(Y) modN
+*/    
 vector<int> modExp(vector<int> N, vector<int> x, vector<int> y){
    vector<int> q(0), r(0), z(0);
    
@@ -394,7 +415,8 @@ vector<int> modExp(vector<int> N, vector<int> x, vector<int> y){
    return z;
    
 }
-   
+/* This functions divides an integer x by another integer y != 0 by finding a quotient q and a remainder r, 
+where x = yq + r and r < y.*/   
 
 void divide(vector<int> x, vector<int> y, vector<int> &q, vector<int> &r){
 
@@ -438,6 +460,15 @@ void divide(vector<int> x, vector<int> y, vector<int> &q, vector<int> &r){
 
    }
 }
+
+/* The operand with fewer digits is padded with 0’s
+
+	Every two elements in the vectors are added
+
+	If both operands are 1’s, the sum will be set to 1 and the carry will be set to 0
+
+	If both operands are 1’s and the carry-in is also a 1, the sum will be set to 1 and the carry will be set to 1*/
+
 vector<int> add(vector<int> x, vector<int> y){
 
  vector<int> a;
@@ -474,6 +505,18 @@ vector<int> add(vector<int> x, vector<int> y){
 
   return a;
 }
+
+/* 
+The operand with fewer digits is padded with 0’s
+
+For each digit:
+
+ If the sum of the two digits and the carry is an odd number, then the difference is 1
+
+ Else the difference is 0
+
+ Extra zeros are removed*/
+
 vector<int> subtract(vector<int>  x, vector<int> y){
 
         int c = 0;
@@ -554,6 +597,9 @@ int binary(vector<int> x){
 
    return Sum;
 }
+
+// This function multiplies the two inputs by using a series of shift and add operation
+
 vector<int> multiply(vector<int> x, vector<int> y){
 
    vector<int> z(0);
