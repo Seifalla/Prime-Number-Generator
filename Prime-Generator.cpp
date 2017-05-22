@@ -598,7 +598,7 @@ int binary(vector<int> x){
    return Sum;
 }
 
-// This function multiplies the two inputs by using a series of shift and add operation
+// This function multiplies the two inputs by using a series of shift and add operations
 
 vector<int> multiply(vector<int> x, vector<int> y){
 
